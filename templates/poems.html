@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+ {% block content %}
+ <h1>{{ category }}</h1> <!-- Display the selected category -->
+
+ <ul>
+     {% for poem in poems %}
+         <li>{{ poem.poem_text }} - {{ poem.poet_name }}</li>
+     {% endfor %}
+ </ul>
+    
+{% endblock %}
