@@ -1,5 +1,6 @@
 from django.db import models
-
+from accounts.models import CustomUser
+from django.utils import timezone
 # Create your models here.
 
     
@@ -13,3 +14,11 @@ class Poems(models.Model):
     poet_id = models.CharField(max_length = 255)
     poet_link = models.URLField(max_length = 255)
     poet_name = models.CharField(max_length = 255)
+
+
+class Comments(models.Model):
+    comment_id = models.AutoField(primary_key=True)
+    poem = models.ForeignKey(Poems, on_delete=models.CASCADE, related_name='comments')
+    user = models.ForeignKey(CustomUser, on_delete=models.CASCADE)
+    text = models.TextField()
+    created_at = models.DateTimeField(default=timezone.now)
