@@ -5,4 +5,6 @@ urlpatterns = [
     path('', views.home, name="home"),
     path('cpoems', views.cpoems, name="cpoems"),
     path('poems/<str:poet_cat>/', views.poems, name="poems"),
+    path('poem/<int:poem_id>/', views.poem, name="poem"),
+    path('add_comment/<int:poem_id>/', views.add_comment, name="add_comment"),
     ]

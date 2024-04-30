@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <div class="container">
+    <h1>{{ poem.poem_title }}</h1>
+    <p>Style: {{ poem.poem_style }}</p>
+    <p>By: {{ poem.poet_name }}</p>
+    <p>{{ poem.poem_text }}</p>
+
+    Comment Section
+    <h2>Comments</h2>
+    <div>
+      {% for comment in poem.comments.all %}
+        <div class="comment">
+          <p><strong>{{ comment.user.username }}</strong></p>
+          <p>{{ comment.text }}</p>
+          <p>{{ comment.created_at }}</p>
+        </div>
+      {% empty %}
+        <p>No comments yet.</p>
+      {% endfor %}
+    </div>
+
+    <!-- Add Comment Form -->
+    <h3>Add a Comment</h3>
+    <form method="post" action="{% url 'add_comment' poem_id=poem.poem_id %}">
+      {% csrf_token %}
+      <textarea name="text" rows="4" cols="50"></textarea><br>
+      <input type="submit" value="Submit">
+    </form>
+  </div>
+{% endblock %}

@@ -1,54 +1,51 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Country Buttons</title>
-</head>
-<body>
+{% extends 'base.html' %}
 
-<button id="الإمارات" onclick="callPoem('الإمارات')">الإمارات</button>
-<button id="البحرين" onclick="callPoem('البحرين')">البحرين</button>
-<button id="الجزائر" onclick="callPoem('الجزائر')">الجزائر</button>
-<button id="السعودية" onclick="callPoem('السعودية')">السعودية</button>
-<button id="السودان" onclick="callPoem('السودان')">السودان</button>
-<button id="العراق" onclick="callPoem('العراق')">العراق</button>
-<button id="المغرب" onclick="callPoem('المغرب')">المغرب</button>
-<button id="اليمن" onclick="callPoem('اليمن')">اليمن</button>
-<button id="تونس" onclick="callPoem('تونس')">تونس</button>
-<button id="سوريا" onclick="callPoem('سوريا')">سوريا</button>
-<button id="عمان" onclick="callPoem('عمان')">عمان</button>
-<button id="فلسطين" onclick="callPoem('فلسطين')">فلسطين</button>
-<button id="لبنان" onclick="callPoem('لبنان')">لبنان</button>
-<button id="ليبيا" onclick="callPoem('ليبيا')">ليبيا</button>
-<button id="مصر" onclick="callPoem('مصر')">مصر</button>
-<button id="الأردن" onclick="callPoem('الأردن')">الأردن</button>
-<button id="الكويت" onclick="callPoem('الكويت')">الكويت</button>
-<button id="قطر" onclick="callPoem('قطر')">قطر</button>
-<button id="موريتانيا" onclick="callPoem('موريتانيا')">موريتانيا</button>
-<button id="العصر الجاهلي" onclick="callPoem('العصر الجاهلي')">العصر الجاهلي</button>
-<button id="العصر الإسلامي" onclick="callPoem('العصر الإسلامي')">العصر الإسلامي</button>
-<button id="العصر العباسي" onclick="callPoem('العصر العباسي')">العصر العباسي</button>
-<button id="العصر الايوبي" onclick="callPoem('العصر الايوبي')">العصر الايوبي</button>
-<button id="العصر العثماني" onclick="callPoem('العصر العثماني')">العصر العثماني</button>
-<button id="عصر المخضرمون" onclick="callPoem('عصر المخضرمون')">عصر المخضرمون</button>
-<button id="العصر الاموي" onclick="callPoem('العصر الاموي')">العصر الاموي</button>
-<button id="العصر الأندلسي" onclick="callPoem('العصر الأندلسي')">العصر الأندلسي</button>
-<button id="العصر المملوكي" onclick="callPoem('العصر المملوكي')">العصر المملوكي</button>
-<button id="شعراء العراق والشام" onclick="callPoem('شعراء العراق والشام')">شعراء العراق والشام</button>
-<button id="أفغانستان" onclick="callPoem('أفغانستان')">أفغانستان</button>
-<button id="إيران" onclick="callPoem('إيران')">إيران</button>
+ {% block content %}
+ <body>
 
-<!-- the poems -->
-
-<script>
-function callPoem(country) {
-    // You can perform actions based on the button ID or the country name
-    console.log('Button ID:', country);
-    // Example: Redirect to a URL based on the button ID
-    window.location.href = `/poems/${country}`; // Replace with your actual URL
-}
-</script>
-
-</body>
-</html>
+    <button id="الإمارات" onclick="callPoem('الإمارات')">الإمارات</button>
+    <button id="البحرين" onclick="callPoem('البحرين')">البحرين</button>
+    <button id="الجزائر" onclick="callPoem('الجزائر')">الجزائر</button>
+    <button id="السعودية" onclick="callPoem('السعودية')">السعودية</button>
+    <button id="السودان" onclick="callPoem('السودان')">السودان</button>
+    <button id="العراق" onclick="callPoem('العراق')">العراق</button>
+    <button id="المغرب" onclick="callPoem('المغرب')">المغرب</button>
+    <button id="اليمن" onclick="callPoem('اليمن')">اليمن</button>
+    <button id="تونس" onclick="callPoem('تونس')">تونس</button>
+    <button id="سوريا" onclick="callPoem('سوريا')">سوريا</button>
+    <button id="عمان" onclick="callPoem('عمان')">عمان</button>
+    <button id="فلسطين" onclick="callPoem('فلسطين')">فلسطين</button>
+    <button id="لبنان" onclick="callPoem('لبنان')">لبنان</button>
+    <button id="ليبيا" onclick="callPoem('ليبيا')">ليبيا</button>
+    <button id="مصر" onclick="callPoem('مصر')">مصر</button>
+    <button id="الأردن" onclick="callPoem('الأردن')">الأردن</button>
+    <button id="الكويت" onclick="callPoem('الكويت')">الكويت</button>
+    <button id="قطر" onclick="callPoem('قطر')">قطر</button>
+    <button id="موريتانيا" onclick="callPoem('موريتانيا')">موريتانيا</button>
+    <button id="العصر الجاهلي" onclick="callPoem('العصر الجاهلي')">العصر الجاهلي</button>
+    <button id="العصر الإسلامي" onclick="callPoem('العصر الإسلامي')">العصر الإسلامي</button>
+    <button id="العصر العباسي" onclick="callPoem('العصر العباسي')">العصر العباسي</button>
+    <button id="العصر الايوبي" onclick="callPoem('العصر الايوبي')">العصر الايوبي</button>
+    <button id="العصر العثماني" onclick="callPoem('العصر العثماني')">العصر العثماني</button>
+    <button id="عصر المخضرمون" onclick="callPoem('عصر المخضرمون')">عصر المخضرمون</button>
+    <button id="العصر الاموي" onclick="callPoem('العصر الاموي')">العصر الاموي</button>
+    <button id="العصر الأندلسي" onclick="callPoem('العصر الأندلسي')">العصر الأندلسي</button>
+    <button id="العصر المملوكي" onclick="callPoem('العصر المملوكي')">العصر المملوكي</button>
+    <button id="شعراء العراق والشام" onclick="callPoem('شعراء العراق والشام')">شعراء العراق والشام</button>
+    <button id="أفغانستان" onclick="callPoem('أفغانستان')">أفغانستان</button>
+    <button id="إيران" onclick="callPoem('إيران')">إيران</button>
+    
+    <!-- the poems -->
+    
+    <script>
+    function callPoem(country) {
+        // You can perform actions based on the button ID or the country name
+        console.log('Button ID:', country);
+        // Example: Redirect to a URL based on the button ID
+        window.location.href = `/poems/${country}`; // Replace with your actual URL
+    }
+    </script>
+    
+    </body>
+    
+{% endblock %}
