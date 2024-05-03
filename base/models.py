@@ -22,3 +22,7 @@ class Comments(models.Model):
     user = models.ForeignKey(CustomUser, on_delete=models.CASCADE)
     text = models.TextField()
     created_at = models.DateTimeField(default=timezone.now)
+    likes_count = models.PositiveIntegerField(default=0)
+
+    def __str__(self):
+        return f"Comment by {self.user.username} on {self.poem.poem_title}"

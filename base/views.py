@@ -29,3 +29,8 @@ def add_comment(request, poem_id):
             comment = Comments.objects.create(poem=poem, user=request.user, text=text)
             comment.save()
     return redirect('poem', poem_id=poem_id)
+def delete_comment(request, comment_id):
+    comment = get_object_or_404(Comments, pk=comment_id)
+    if comment.user == request.user:
+        comment.delete()
+    return redirect('poem', poem_id=comment.poem.poem_id)

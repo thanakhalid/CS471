@@ -7,7 +7,7 @@
     <p>By: {{ poem.poet_name }}</p>
     <p>{{ poem.poem_text }}</p>
 
-    Comment Section
+    <!-- Comment Section -->
     <h2>Comments</h2>
     <div>
       {% for comment in poem.comments.all %}
@@ -15,6 +15,12 @@
           <p><strong>{{ comment.user.username }}</strong></p>
           <p>{{ comment.text }}</p>
           <p>{{ comment.created_at }}</p>
+          {% if comment.user == request.user %}
+            <form method="post" action="{% url 'delete_comment' comment_id=comment.comment_id %}">
+              {% csrf_token %}
+              <input type="submit" value="Delete">
+            </form>
+          {% endif %}
         </div>
       {% empty %}
         <p>No comments yet.</p>
