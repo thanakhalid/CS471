@@ -1,13 +1,15 @@
 {% extends "base.html" %}
-
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/home.css' %}">
 {% block title %}Home{% endblock %}
-
 {% block content %}
-{% if user.is_authenticated %}
-  Hi {{ user.username }}!
-{% else %}
-  <p>You are not logged in</p>
-  <a href="{% url 'login' %}">Log In</a> |
-  <a href="{% url 'signup' %}">Sign Up</a>
-{% endif %}
+<div class="home-data">
+    {% if user.is_authenticated %}
+        <p>Hi {{ user.username }}!</p>
+    {% else %}
+        <p>مرحباً</p>
+        <a href="{% url 'login' %}">تسجيل الدخول</a> |
+        <a href="{% url 'signup' %}">حساب جديد</a>
+    {% endif %}
+</div>
 {% endblock %}

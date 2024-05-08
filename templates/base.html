@@ -8,17 +8,29 @@
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="shortcut icon" type="x-icon" href="/assets/LOGO.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@300&family=Noto+Kufi+Arabic:wght@100..900&display=swap" rel="stylesheet">
 
     <title>{% block title %}أنيس{% endblock %}</title>
+
+    <style>
+      /* Define a CSS class for Noto Kufi Arabic */
+      .noto-kufi-arabic {
+          font-family: "Noto Kufi Arabic", sans-serif;
+          font-weight: 400; /* Adjust the font weight as needed */
+      }
+    </style>
   </head>
   
-  <body>
+  <body class="noto-kufi-arabic">
     {% include 'navbar.html' %}
     <div id="background"></div>
     <br/>
     {% block content %}
-    {% endblock %}
 
+  
+    {% endblock %}
  
     <!-- Optional JavaScript; choose one of the two! -->
 
