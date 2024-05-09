@@ -1,11 +1,15 @@
 {% extends 'base.html' %}
 
 {% block content %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/poem.css' %}">
   <div class="container">
+    <div class="poem">
     <h1>{{ poem.poem_title }}</h1>
-    <p>Style: {{ poem.poem_style }}</p>
-    <p>By: {{ poem.poet_name }}</p>
+    <p>النوع: {{ poem.poem_style }}</p>
+    <p>الشاعر: {{ poem.poet_name }}</p>
     <p>{{ poem.poem_text }}</p>
+  </div>
 
     <!-- Comment Section -->
     <h2>Comments</h2>
@@ -32,7 +36,7 @@
     <form method="post" action="{% url 'add_comment' poem_id=poem.poem_id %}">
       {% csrf_token %}
       <textarea name="text" rows="4" cols="50"></textarea><br>
-      <input type="submit" value="Submit">
+      <input type="submit" value="Submit" class="btn btn-dark">
     </form>
   </div>
 {% endblock %}

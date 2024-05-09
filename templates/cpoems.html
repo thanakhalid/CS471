@@ -1,40 +1,41 @@
 {% extends 'base.html' %}
 
  {% block content %}
+ {% load static %}
+<link rel="stylesheet" href="{% static 'css/cpoems.css' %}">
  <body>
-
-    <button id="الإمارات" onclick="callPoem('الإمارات')">الإمارات</button>
-    <button id="البحرين" onclick="callPoem('البحرين')">البحرين</button>
-    <button id="الجزائر" onclick="callPoem('الجزائر')">الجزائر</button>
-    <button id="السعودية" onclick="callPoem('السعودية')">السعودية</button>
-    <button id="السودان" onclick="callPoem('السودان')">السودان</button>
-    <button id="العراق" onclick="callPoem('العراق')">العراق</button>
-    <button id="المغرب" onclick="callPoem('المغرب')">المغرب</button>
-    <button id="اليمن" onclick="callPoem('اليمن')">اليمن</button>
-    <button id="تونس" onclick="callPoem('تونس')">تونس</button>
-    <button id="سوريا" onclick="callPoem('سوريا')">سوريا</button>
-    <button id="عمان" onclick="callPoem('عمان')">عمان</button>
-    <button id="فلسطين" onclick="callPoem('فلسطين')">فلسطين</button>
-    <button id="لبنان" onclick="callPoem('لبنان')">لبنان</button>
-    <button id="ليبيا" onclick="callPoem('ليبيا')">ليبيا</button>
-    <button id="مصر" onclick="callPoem('مصر')">مصر</button>
-    <button id="الأردن" onclick="callPoem('الأردن')">الأردن</button>
-    <button id="الكويت" onclick="callPoem('الكويت')">الكويت</button>
-    <button id="قطر" onclick="callPoem('قطر')">قطر</button>
-    <button id="موريتانيا" onclick="callPoem('موريتانيا')">موريتانيا</button>
-    <button id="العصر الجاهلي" onclick="callPoem('العصر الجاهلي')">العصر الجاهلي</button>
-    <button id="العصر الإسلامي" onclick="callPoem('العصر الإسلامي')">العصر الإسلامي</button>
-    <button id="العصر العباسي" onclick="callPoem('العصر العباسي')">العصر العباسي</button>
-    <button id="العصر الايوبي" onclick="callPoem('العصر الايوبي')">العصر الايوبي</button>
-    <button id="العصر العثماني" onclick="callPoem('العصر العثماني')">العصر العثماني</button>
-    <button id="عصر المخضرمون" onclick="callPoem('عصر المخضرمون')">عصر المخضرمون</button>
-    <button id="العصر الاموي" onclick="callPoem('العصر الاموي')">العصر الاموي</button>
-    <button id="العصر الأندلسي" onclick="callPoem('العصر الأندلسي')">العصر الأندلسي</button>
-    <button id="العصر المملوكي" onclick="callPoem('العصر المملوكي')">العصر المملوكي</button>
-    <button id="شعراء العراق والشام" onclick="callPoem('شعراء العراق والشام')">شعراء العراق والشام</button>
-    <button id="أفغانستان" onclick="callPoem('أفغانستان')">أفغانستان</button>
-    <button id="إيران" onclick="callPoem('إيران')">إيران</button>
-    
+    <div class="btns">
+    <button id="الإمارات" onclick="callPoem('الإمارات')" class="btn btn-dark">الإمارات</button>
+    <button id="البحرين" onclick="callPoem('البحرين')" class="btn btn-dark">البحرين</button>
+    <button id="الجزائر" onclick="callPoem('الجزائر')" class="btn btn-dark">الجزائر</button>
+    <button id="السعودية" onclick="callPoem('السعودية')" class="btn btn-dark">السعودية</button>
+    <button id="السودان" onclick="callPoem('السودان')" class="btn btn-dark">السودان</button>
+    <button id="العراق" onclick="callPoem('العراق')" class="btn btn-dark">العراق</button>
+    <button id="المغرب" onclick="callPoem('المغرب')" class="btn btn-dark">المغرب</button>
+    <button id="اليمن" onclick="callPoem('اليمن')" class="btn btn-dark">اليمن</button>
+    <button id="تونس" onclick="callPoem('تونس')" class="btn btn-dark">تونس</button>
+    <button id="سوريا" onclick="callPoem('سوريا')" class="btn btn-dark">سوريا</button>
+    <button id="عمان" onclick="callPoem('عمان')" class="btn btn-dark">عمان</button>
+    <button id="فلسطين" onclick="callPoem('فلسطين')" class="btn btn-dark">فلسطين</button>
+    <button id="لبنان" onclick="callPoem('لبنان')" class="btn btn-dark">لبنان</button>
+    <button id="ليبيا" onclick="callPoem('ليبيا')" class="btn btn-dark">ليبيا</button>
+    <button id="مصر" onclick="callPoem('مصر')" class="btn btn-dark">مصر</button>
+    <button id="الأردن" onclick="callPoem('الأردن')" class="btn btn-dark">الأردن</button>
+    <button id="الكويت" onclick="callPoem('الكويت')" class="btn btn-dark">الكويت</button>
+    <button id="قطر" onclick="callPoem('قطر')" class="btn btn-dark">قطر</button>
+    <button id="موريتانيا" onclick="callPoem('موريتانيا')" class="btn btn-dark">موريتانيا</button>
+    <button id="العصر الجاهلي" onclick="callPoem('العصر الجاهلي')" class="btn btn-dark">العصر الجاهلي</button>
+    <button id="العصر الإسلامي" onclick="callPoem('العصر الإسلامي')" class="btn btn-dark">العصر الإسلامي</button>
+    <button id="العصر العباسي" onclick="callPoem('العصر العباسي')" class="btn btn-dark">العصر العباسي</button>
+    <button id="العصر الايوبي" onclick="callPoem('العصر الايوبي')" class="btn btn-dark">العصر الايوبي</button>
+    <button id="عصر المخضرمون" onclick="callPoem('عصر المخضرمون')" class="btn btn-dark">عصر المخضرمون</button>
+    <button id="العصر الاموي" onclick="callPoem('العصر الاموي')" class="btn btn-dark">العصر الاموي</button>
+    <button id="العصر الأندلسي" onclick="callPoem('العصر الأندلسي')" class="btn btn-dark">العصر الأندلسي</button>
+    <button id="العصر المملوكي" onclick="callPoem('العصر المملوكي')" class="btn btn-dark">العصر المملوكي</button>
+    <button id="شعراء العراق والشام" onclick="callPoem('شعراء العراق والشام')" class="btn btn-dark">شعراء العراق والشام</button>
+    <button id="أفغانستان" onclick="callPoem('أفغانستان')" class="btn btn-dark">أفغانستان</button>
+    <button id="إيران" onclick="callPoem('إيران')" class="btn btn-dark">إيران</button>
+</div>
     <!-- the poems -->
     
     <script>

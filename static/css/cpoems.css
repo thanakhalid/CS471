@@ -1,0 +1,14 @@
+button {
+    margin: 10px;
+}
+.btns {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Three columns with equal width */
+    gap: 10px; /* Gap between buttons */
+    font-size: 24px;
+    margin-top: 20px;
+}
+
+.btn {
+    width: 100%; /* Each button takes the full width of its grid cell */
+}

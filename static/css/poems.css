@@ -1,0 +1,15 @@
+.card {
+    width: 80%; /* Adjust the width as needed */
+    margin: 10px auto; /* Center the card horizontally and add spacing */
+    background-color: rgba(255, 255, 255, 0.9); /* Slightly transparent white background */
+    border: 1px solid #ccc; /* Add a border for visual separation */
+    border-radius: 5px; /* Add rounded corners */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add a subtle shadow for depth */
+    margin-bottom: 20px; /* Add space between each card */
+}
+
+.card-header,
+.card-title,
+.card-text {
+    text-align: center; /* Center text inside the card */
+}

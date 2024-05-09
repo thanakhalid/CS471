@@ -1,0 +1,24 @@
+.comment {
+    background-color: rgba(0, 0, 0, 0.9); /* Transparent background */
+    padding: 10px;
+    margin-bottom: 10px;
+}
+.poem{
+    background-color: rgba(0, 0, 0, 0.9); /* Transparent background */
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.comment p {
+    margin: 0; /* Remove default margin for paragraphs inside comments */
+}
+
+.container {
+    text-align: center; /* Align text to the center */
+}
+h2 {
+    color: white !important;
+    }
+h3 {
+    color: white !important;
+    }
